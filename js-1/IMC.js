@@ -1,6 +1,7 @@
 // escribe la función bmi acá
 function bmi(peso, altura) {
-  let resultado = peso / (altura * altura);
+  const alturaAlCuadrado = Math.pow(altura, 2);
+  let resultado = peso / alturaAlCuadrado;
   return resultado;
 }
 // código de prueba

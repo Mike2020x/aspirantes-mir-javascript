@@ -1,6 +1,6 @@
 // escribe la función hola acá
 function hola(name) {
-  console.log("Hola " + name + "!");
+  return "Hola " + name + "!";
 }
 // código de prueba
 console.log(hola("Pedro")); // "Hola Pedro!"
