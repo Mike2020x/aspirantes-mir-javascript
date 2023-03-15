@@ -23,12 +23,12 @@ function max(array) {
     return undefined;
   }
   let maximo = array[0];
-  for (let i = 0; i < array.length; i++) {
+  for (let i = 1; i < array.length; i++) {
     if (array[i] > maximo) {
-      maximo = arr[i];
+      maximo = array[i];
     }
-    return maximo;
   }
+  return maximo;
 }
 console.log(max([1, 3, 2])); // 3
 console.log(max([10, 9, 8, 7, 6, 5, 4])); // 10
@@ -40,21 +40,28 @@ console.log("******Ejercicio 3*********");
 //encuentra el mayor.Si el arreglo está vacío debe retornar - 1.
 
 // escribe la función maxIndex acá
-function maxIndex(array) {
-  if (array.length === 0) {
+
+function maxIndex(arr) {
+  if (arr.length === 0) { 
     return -1;
   }
-  let maximo = array[0];
-  for (let i = 0; i < array.length; i++) {
-    if (array[i] > maximo[i]) {
-      maximo = arr[i];
+
+  let max_val = arr[0];
+  let max_index = 0;
+
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > max_val) {
+      max_val = arr[i];
+      max_index = i;
     }
-    return maximo;
   }
+
+  return max_index;
 }
 
+
 console.log(maxIndex([1, 3, 2])); // 1
-console.log(maxIndex([10, 9, 8, 7, 6, 5, 4])); // 10
+console.log(maxIndex([10, 9, 8, 7, 6, 5, 4])); // 0
 console.log(maxIndex([])); // -1
 
 console.log("*******Ejercicio 4********");
